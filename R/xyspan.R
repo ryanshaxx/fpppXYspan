@@ -29,16 +29,16 @@ xyspan <- function (eval_period, smooth_fd_object) {
 
       if (length(eval_period) == 1) {
         if (eval_period[1] == round(eval_period[1])) {
-          arg_vals = seq(eval_period[1], eval_period[1]+1, length=181)
-          period = eval_period[1]
+          arg_vals <- seq(eval_period[1], eval_period[1]+1, length=181)
+          period <- eval_period[1]
         } else {
           print("Error: Please provide a valid wholenumber numeric value")
           return(NULL)
         }
       } else if (length(eval_period) == 2) {
         if ((eval_period[1] == round(eval_period[1])) & (eval_period[2] == round(eval_period[2]))) {
-          arg_vals = seq(eval_period[1], eval_period[2], length=181)
-          period = paste(eval_period[1], eval_period[2], sep = "-")
+          arg_vals <- seq(eval_period[1], eval_period[2], length=181)
+          period <- paste(eval_period[1], eval_period[2], sep = "-")
         } else {
           print("Error: Please provide a valid wholenumber numeric value(s)")
           return(NULL)
@@ -66,7 +66,7 @@ xyspan <- function (eval_period, smooth_fd_object) {
         x_intercept_indices <- which(convert_diff != 0)
 
         if (length(x_intercept_indices) < 2) {
-          y_span = Inf
+          y_span <- Inf
         } else {
           #use these indices to get the values of y (acceleration) at these indices
           y_vals <- temp[,2][x_intercept_indices]
@@ -84,7 +84,7 @@ xyspan <- function (eval_period, smooth_fd_object) {
         convert_diff <-diff(sign(temp[,2]))
         y_intercept_indices <- which(convert_diff != 0)
         if (length(y_intercept_indices) < 2) {
-          x_span = Inf
+          x_span <- Inf
         } else {
           #use these indices to get the values of x (velocity) at these indices
           x_vals <- temp[,1][y_intercept_indices]

@@ -2,26 +2,31 @@
 % Please edit documentation in R/xyspan.R
 \name{xyspan}
 \alias{xyspan}
-\title{xyspan}
+\title{Extract X-axis and Y-axis span}
 \usage{
-xyspan(smooth_fd_object)
+xyspan(eval_period, smooth_fd_object)
 }
 \arguments{
-\item{dat}{A data set object}
+\item{eval_period}{A vector that represents the range of values at which the functional data object is to be evaluated against}
 
-\item{id}{Scope (e.g., country codes or individual IDs)}
-
-\item{time}{Time (e.g., time periods are given by years, months, ...)}
+\item{smooth_fd_object}{A functional data object that contains the set(s) of smooth curves}
 }
 \value{
-A data frame object that contains a summary of a sample that
-    can later be converted to a TeX output using \code{overview_print}
+A data frame object that contains the corresponding integer value of the set of basis function coefficients used (\code{coef_set}),
+the vector range at which the functional data object was evaluated (\code{evalarg}), the X-axis span (\code{x_span_vec}) and the Y-axis span of the each phase-plane plot (\code{y_span_vec}).
 }
 \description{
-Provides an overview table for the time and scope conditions of
-    a data set
+Generates a phase-plane plot and extracts the X-axis and Y-axis span from this phase-plane plot
 }
 \examples{
-data(toydata)
-output_table <- overview_tab(dat = toydata, id = ccode, time = year)
+library(fda)
+data(CanadianWeather)
+goodsbasis <- create.bspline.basis(rangeval=c(1919,2000), nbasis=161, norder=8)
+LfdobjNonDur <- int2Lfd(4)
+argvals = seq(1919,2000,len=length(nondurables))
+logNondurSm <- smooth.basisPar(argvals, y=log10(nondurables),
+fdobj=goodsbasis, Lfdobj=LfdobjNonDur, lambda=1e-11)
+
+log_fd = logNondurSm$fd
+XaxisYaxis_span <- xyspan(c(1920,2000),  log_fd)
 }

@@ -1,0 +1,19 @@
+---
+title: "fpppXYspan-help"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{fpppXYspan-help}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(fpppXYspan)
+```

@@ -1,14 +1,22 @@
 Package: fpppXYspan
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Extracts the X-Axis and Y-Axis Span from a Phase-Plane Plot
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
+Author: Ryan Shackleton
+Maintainer: Ryan Shackleton <ryanshaqq@gmail.com>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+License: GPL-3
+URL: https://github.com/ryanshaxx/fpppXYspan
+BugReports: https://github.com/ryanshaxx/fpppXYspan/issues
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
+Language: en-UK
+Depends:
+    R (>= 4.2.0)
 Imports:
 	fda (>= 5.5.1)
+Suggests: 
+    knitr
+VignetteBuilder: knitr

@@ -2,7 +2,7 @@
 % Please edit documentation in R/xyspan.R
 \name{xyspan}
 \alias{xyspan}
-\title{Extract X-axis and Y-axis span}
+\title{Extract X-axis and Y-axis Span}
 \usage{
 xyspan(eval_period, smooth_fd_object)
 }
@@ -14,6 +14,8 @@ xyspan(eval_period, smooth_fd_object)
 \value{
 A data frame object that contains the corresponding integer value of the set of basis function coefficients used (\code{coef_set}),
 the vector range at which the functional data object was evaluated (\code{evalarg}), the X-axis span (\code{x_span_vec}) and the Y-axis span of the each phase-plane plot (\code{y_span_vec}).
+
+Note: If the phase-plane plot does not have two bounds, on each respective axis, the function will return Inf for the respective axis.
 }
 \description{
 Generates a phase-plane plot and extracts the X-axis and Y-axis span from this phase-plane plot

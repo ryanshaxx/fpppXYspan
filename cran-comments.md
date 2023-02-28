@@ -1,3 +1,14 @@
+## Resubmission
+This is a resubmission. In this version I have:
+
+* Updated the DESCRIPTION to avoid starting it with "This package", "This 
+function", package name, title or similar.
+
+* Updated the DESCRIPTION to omit the lengthy explanation about the contributors.
+
+* Added a logical argument to the `xyspan` function to express or suppress error messages.
+
+
 ## R CMD check results
 
 0 errors | 0 warnings | 1 note
@@ -45,3 +56,5 @@ On fedora-clang-devel (r-devel)
   Skipping checking HTML validation: no command 'tidy' found
 
 0 errors v | 0 warnings v | 4 notes x
+
+

@@ -4,6 +4,7 @@
 #'
 #' @param eval_period A vector that represents the range of values at which the functional data object is to be evaluated against
 #' @param smooth_fd_object A functional data object that contains the set(s) of smooth curves
+#' @param verbose A logical to express error messages. The default value is FALSE, set verbose = TRUE to view error messages.
 #'
 #' @return A data frame object that contains the corresponding integer value of the set of basis function coefficients used (\code{coef_set}),
 #' the vector range at which the functional data object was evaluated (\code{evalarg}), the X-axis span (\code{x_span_vec}) and the Y-axis span of the each phase-plane plot (\code{y_span_vec}).
@@ -23,7 +24,7 @@
 #' @export
 #' @import fda
 
-xyspan <- function (eval_period, smooth_fd_object) {
+xyspan <- function (eval_period, smooth_fd_object, verbose = FALSE) {
 
   if (is.fd(smooth_fd_object)){
 
@@ -34,21 +35,27 @@ xyspan <- function (eval_period, smooth_fd_object) {
           arg_vals <- seq(eval_period[1], eval_period[1]+1, length=181)
           period <- eval_period[1]
         } else {
-          print("Error: Please provide a valid wholenumber numeric value")
-          return(NULL)
+          if (verbose){
+            stop("Error: Please provide a valid wholenumber numeric value")
+            return(NULL)
+          }
         }
       } else if (length(eval_period) == 2) {
         if ((eval_period[1] == round(eval_period[1])) & (eval_period[2] == round(eval_period[2]))) {
           arg_vals <- seq(eval_period[1], eval_period[2], length=181)
           period <- paste(eval_period[1], eval_period[2], sep = "-")
         } else {
-          print("Error: Please provide a valid wholenumber numeric value(s)")
-          return(NULL)
+          if (verbose){
+            stop("Error: Please provide a valid wholenumber numeric value(s)")
+            return(NULL)
+          }
         }
 
       } else {
-        print("Error: Please provide a valid numeric range")
-        return(NULL)
+        if (verbose){
+          stop("Error: Please provide a valid numeric range")
+          return(NULL)
+        }
       }
 
       #number of sets of data
@@ -114,13 +121,17 @@ xyspan <- function (eval_period, smooth_fd_object) {
       return(df_span)
 
     } else {
-      print("Error: The first argument must be of class 'numeric'")
-      return(NULL)
+      if (verbose){
+        stop("Error: The first argument must be of class 'numeric'")
+        return(NULL)
+      }
     }
 
   } else {
-    print("Error: Second argument must be a functional data object of class 'fd'")
-    return(NULL)
+    if (verbose){
+      stop("Error: Second argument must be a functional data object of class 'fd'")
+      return(NULL)
+    }
   }
 
 }

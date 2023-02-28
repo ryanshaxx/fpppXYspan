@@ -4,12 +4,14 @@
 \alias{xyspan}
 \title{Extract X-axis and Y-axis Span}
 \usage{
-xyspan(eval_period, smooth_fd_object)
+xyspan(eval_period, smooth_fd_object, verbose = FALSE)
 }
 \arguments{
 \item{eval_period}{A vector that represents the range of values at which the functional data object is to be evaluated against}
 
 \item{smooth_fd_object}{A functional data object that contains the set(s) of smooth curves}
+
+\item{verbose}{A logical to express error messages. The default value is FALSE, set verbose = TRUE to view error messages.}
 }
 \value{
 A data frame object that contains the corresponding integer value of the set of basis function coefficients used (\code{coef_set}),

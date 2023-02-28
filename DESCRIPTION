@@ -9,19 +9,7 @@ Authors@R: c(
     person("Giles", "Hooker", , "gjh27@cornell.edu", role = "ctb")
   )
 Maintainer: Ryan Shackleton <ryanshaqq@gmail.com>
-Description: This function was developed to support the functional data
-    analysis ‘fda’ package created by Ramsay, J. O., Graves, Spencer and
-    Hooker, Giles. The function itself was written independently of these
-    individuals, however, they have been added as contributors. The reason
-    for adding these individuals as contributors is because the example
-    included in this package, with the exception of the last two lines,
-    was taken verbatim (copied) from an example in the 'fda' package (see
-    the ?phaseplanePlot example from the 'fda' package). I do not intend
-    to express the work of Ramsay, J. O., Graves, Spencer and Hooker,
-    Giles as my own and would like to preserve any copyright/license
-    statements of the 'fda' package thereof.  This function should be used
-    in conjunction with the functions provided by the 'fda' package. A
-    smooth curve can be displayed graphically as a phase-plane plot
+Description: A smooth curve can be displayed graphically as a phase-plane plot
     (velocity verse acceleration). A phase-plane plot is a graphical
     representation of the energy of the system. The X-axis represents
     kinetic energy and the Y-axis the potential energy of the system.  See
@@ -37,7 +25,8 @@ Description: This function was developed to support the functional data
     plots) within the functional data object variable. Upon calling this
     function, the phase-plane plot or plots of the functional data object
     will be generated and a data frame contain a summary of the X-axis and
-    Y-axis spans.
+    Y-axis spans. It should be used in conjunction with the functions provided 
+    by the 'fda' package.
 License: GPL-3
 URL: https://github.com/ryanshaxx/fpppXYspan
 Depends:

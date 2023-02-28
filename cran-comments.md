@@ -8,6 +8,12 @@ function", package name, title or similar.
 
 * Added a logical argument to the `xyspan` function to express or suppress error messages.
 
+## R CMD check results (resubmission)
+
+Duration: 1m 5.3s
+
+0 errors v | 0 warnings v | 0 notes v
+
 
 ## R CMD check results
 

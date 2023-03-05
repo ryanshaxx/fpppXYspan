@@ -1,3 +1,8 @@
+## Second Resubmission
+This is another resubmission. In this version I have:
+
+* Updated the reference details within the description section of DESCRIPTION.
+
 ## Resubmission
 This is a resubmission. In this version I have:
 

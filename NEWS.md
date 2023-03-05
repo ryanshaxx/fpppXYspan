@@ -10,3 +10,7 @@ function", package name, title or similar.
 * Updated the DESCRIPTION to omit the lengthy explanation about the contributors.
 
 * Added a logical argument to the `xyspan` function to express or suppress error messages.
+
+# fpppXYspan 0.1.2
+
+* Updated the reference details within the description section of DESCRIPTION.

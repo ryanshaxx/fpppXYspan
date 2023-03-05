@@ -1,7 +1,7 @@
 Type: Package
 Package: fpppXYspan
 Title: Extracts the X-Axis and Y-Axis Span from a Phase-Plane Plot
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person("Ryan", "Shackleton", , "ryanshaqq@gmail.com", role = c("aut", "cre")),
     person("J.O", "Ramsay", , "ramsay@psych.mcgill.ca", role = "ctb"),
@@ -13,9 +13,8 @@ Description: A smooth curve can be displayed graphically as a phase-plane plot
     (velocity verse acceleration). A phase-plane plot is a graphical
     representation of the energy of the system. The X-axis represents
     kinetic energy and the Y-axis the potential energy of the system.  See
-    Ramsay, J. O. and Silverman, B. W. (2005) Functional Data Analysis.
-    New York: Springer and in Ramsay, J. O., Hooker, Giles, and Graves,
-    Spencer (2009). Functional Data Analysis with R and Matlab (Springer)
+    Ramsay, J. O. and Silverman, B. W. (2005) <https://doi.org/10.1002/0470013192.bsa239> 
+    and in Ramsay, J. O., Hooker, Giles, and Graves, Spencer (2009) <doi:10.1007/978-0-387-98185-7>
     for further details. The function in this package dynamically extracts
     the X-axis and Y-axis span, the total kinetic energy and potential
     energy, respectively in the system. These quantities can give valuable

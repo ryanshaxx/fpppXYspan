@@ -1,7 +1,7 @@
 Type: Package
 Package: fpppXYspan
 Title: Extracts the X-Axis and Y-Axis Span from a Phase-Plane Plot
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
     person("Ryan", "Shackleton", , "ryanshaqq@gmail.com", role = c("aut", "cre")),
     person("J.O", "Ramsay", , "ramsay@psych.mcgill.ca", role = "ctb"),
